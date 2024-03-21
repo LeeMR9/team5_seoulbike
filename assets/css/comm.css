@@ -2342,6 +2342,8 @@ table tbody tr .add-right-line {
 .faq-form {
   display: flex;
   justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
   color: #777777;
 }
 
@@ -2398,7 +2400,7 @@ table tbody tr .add-right-line {
   border: none;
   border-radius: 30px;
   position: absolute;
-  top: 220px;
+  top: 28%;
   width: 247px;
   z-index: 1;
 }
@@ -2433,6 +2435,13 @@ table tbody tr .add-right-line {
   padding-top: 44px;
   margin-top: 44px;
 }
+.no-results-message::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #c9c9c9;
+  width: 100%;
+  margin-top: 44px;
+}
 
 .faq-search_form {
   display: flex;
@@ -2443,12 +2452,13 @@ table tbody tr .add-right-line {
   border-radius: 29px;
   padding-right: 20px;
   background-color: #fff;
+  width: 100%;
   height: 100%;
 }
 .faq-search_form .faq-search_input {
   border: none;
   background-color: transparent;
-  padding: 14px 150px 14px 20px;
+  padding: 14px 0% 14px 20px;
   display: flex;
   align-items: center;
   border-radius: 29px;
@@ -2463,15 +2473,13 @@ table tbody tr .add-right-line {
   color: #ccc;
 }
 .faq-search_form .faq-search_btn {
-  content: "";
-  display: block;
   background: url(../../images/sub-faq/search.png) no-repeat 3px 3px;
   background-size: 20px 20px;
   width: 25px;
   height: 25px;
 }
 
-.faq-containar::after {
+.faq-question::after {
   content: "";
   display: block;
   border-bottom: 1px solid #c9c9c9;
@@ -2791,12 +2799,26 @@ table tbody tr .add-right-line {
   color: #30E291;
 }
 
+@media screen and (max-width: 1485px) {
+  .faq-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .select-form_content {
+    margin-right: 0px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .faq-wrap {
     padding: 0 36px;
   }
   .in-faq h3 {
     font-size: 28px;
+  }
+  .faq-form {
+    flex-direction: row;
+    max-width: 70%;
+    min-width: 60%;
   }
   .select-form_content {
     margin-right: 44px;
@@ -2819,21 +2841,11 @@ table tbody tr .add-right-line {
   .select-form_content .faq-depth2 {
     padding: 20px 20px;
     gap: 10px;
-    top: 200px;
+    top: 30%;
     width: 231px;
   }
   .select-form_content .show-depth2 p::after {
     margin-top: 10px;
-  }
-  .faq-search_form .faq-search_input {
-    padding: 12px 120px 12px 20px;
-    font-size: 16px;
-  }
-  .faq-search_form .faq-search_btn {
-    background: url(../../images/sub-faq/search.png) no-repeat 4px 4px;
-    background-size: 18px 18px;
-    width: 25px;
-    height: 25px;
   }
   .faq-fractionation::before {
     padding-top: 15px;
@@ -2881,8 +2893,8 @@ table tbody tr .add-right-line {
   .faq-form {
     flex-direction: column;
     gap: 20px;
-    max-width: 498px;
     margin: 0 auto;
+    max-width: 70%;
   }
   .select-form_content {
     margin-right: 0;
@@ -2903,9 +2915,6 @@ table tbody tr .add-right-line {
   }
   .faq-search_form {
     min-height: 52px;
-  }
-  .faq-search_form .faq-search_input {
-    padding: 12px 0 12px 20px;
   }
   .faq-fractionation::before {
     padding-top: 15px;
@@ -2951,9 +2960,9 @@ table tbody tr .add-right-line {
     gap: 35px;
   }
 }
-@media screen and (max-width: 528px) {
+@media screen and (max-width: 675px) {
   .faq-form {
-    max-width: 389px;
+    max-width: 80%;
   }
   .faq-frt_btn {
     padding: 0 24px 15px;
@@ -2976,6 +2985,11 @@ table tbody tr .add-right-line {
   }
   .faq-frt_answer {
     padding: 45px 40px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .faq-form {
+    max-width: 85%;
   }
 }
 @media screen and (max-width: 430px) {
@@ -3008,7 +3022,7 @@ table tbody tr .add-right-line {
     padding: 20px 20px;
     gap: 13px;
     max-width: 215px;
-    top: 180px;
+    top: 28%;
   }
   .select-form_content .show-depth2 p::after {
     margin-top: 13px;

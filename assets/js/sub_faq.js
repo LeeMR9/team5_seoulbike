@@ -69,25 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageLinks = document.querySelectorAll('.faq-pagenumber');
 
 
-    const noResults = document.createElement('p');
-    noResults.className = 'no-results-message';
-    faqContainer.appendChild(noResults);
-    noResults.style.display = 'none';
-
-
-    if (searchInput && searchBtn) {
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                handleSearch();
-            }
-        });
-
-        searchBtn.addEventListener('click', function () {
-            handleSearch();
-        });
-    }
-
-
     allAnswers.forEach(answer => {
         answer.style.display = 'none';
     });
@@ -182,6 +163,23 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
+    const noResults = document.createElement('p');
+    noResults.className = 'no-results-message';
+    faqContainer.appendChild(noResults);
+    noResults.style.display = 'none';
+
+    if (searchInput && searchBtn) {
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+
+        searchBtn.addEventListener('click', function () {
+            handleSearch();
+        });
+    }
+
     function displaynoResults(message) {
         if (noResults) {
             noResults.textContent = message;
@@ -211,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (faqFraction) {
                     faqFraction.style.display = 'block';
                 }
-                hasResults = true;
+                hasResults = true;ㅡ
             } else {
                 question.style.display = 'none';
                 if (faqFraction) {
